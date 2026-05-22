@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "EB Garamond", serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+
+  --color-primary: #002a19;
+  --color-primary-container: #0b422b;
+  --color-secondary: #775a19;
+  --color-tertiary: #12272d;
+  --color-gold-light: #e5d1a4;
+  --color-emerald-deep: #072c1d;
+  --color-background: #f5faff;
+  --color-surface-cream: #fdfbf7;
+  --color-crisp-white: #ffffff;
+  
+  --shadow-level-1: 0 4px 20px rgba(11, 66, 43, 0.05);
+  --shadow-level-2: 0 12px 40px rgba(11, 66, 43, 0.08);
+
+  --radius-soft: 0.25rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-[#131d23] font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}

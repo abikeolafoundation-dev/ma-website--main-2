@@ -1,0 +1,79 @@
+import {motion} from 'motion/react';
+import {CheckCircle2, Landmark, TrendingUp, GraduationCap, Users2} from 'lucide-react';
+import {Link} from 'react-router-dom';
+
+export default function WaqfModel() {
+  const points = [
+    'Perpetual Charity (Sadaqah Jariyah) for donors.',
+    'Long-term financial stability for orphan education.',
+    'Transparent reinvestment into community infrastructure.'
+  ];
+
+  return (
+    <section className="py-24 md:py-32 bg-[#ebf5fd] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        
+        {/* Text Content */}
+        <motion.div 
+          initial={{opacity: 0, x: -30}}
+          whileInView={{opacity: 1, x: 0}}
+          viewport={{once: true}}
+          className="order-2 lg:order-1"
+        >
+          <h2 className="text-primary text-3xl md:text-5xl font-display font-semibold mb-8">
+            The Waqf Model: Sustainable Giving
+          </h2>
+          <p className="text-[#414943] text-lg font-body mb-8 leading-relaxed">
+            Our Waqf (endowment) model ensures that your contribution continues to generate impact long after your donation. We invest in high-yield, ethical ventures to create a perpetual stream of support for families in need.
+          </p>
+          
+          <ul className="space-y-5 mb-10">
+            {points.map((point, i) => (
+              <li key={i} className="flex gap-4 items-start">
+                <CheckCircle2 className="text-secondary shrink-0 mt-1" size={24} />
+                <p className="text-[#414943] font-body leading-tight">{point}</p>
+              </li>
+            ))}
+          </ul>
+
+          <Link to="/pillars">
+            <button className="bg-primary-container text-white px-8 py-4 rounded-xl font-body font-bold text-lg hover:shadow-lg transition-all active:scale-95">
+              Learn About Waqf
+            </button>
+          </Link>
+        </motion.div>
+
+        {/* Visual Grid */}
+        <motion.div 
+          initial={{opacity: 0, scale: 0.9}}
+          whileInView={{opacity: 1, scale: 1}}
+          viewport={{once: true}}
+          className="order-1 lg:order-2 grid grid-cols-2 gap-4 relative"
+        >
+          <div className="space-y-4 pt-12 md:pt-16">
+            <div className="aspect-[3/4] bg-emerald-deep rounded-2xl p-6 md:p-8 flex flex-col justify-end shadow-level-1">
+              <Landmark className="text-white mb-4" size={36} />
+              <h4 className="text-white font-display text-xl font-medium tracking-tight">Endowment Fund</h4>
+            </div>
+            <div className="aspect-square bg-secondary rounded-2xl p-6 md:p-8 flex flex-col justify-end shadow-level-1">
+              <TrendingUp className="text-white mb-4" size={36} />
+              <h4 className="text-white font-display text-xl font-medium tracking-tight">Ethical Returns</h4>
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="aspect-square bg-gold-light rounded-2xl p-6 md:p-8 flex flex-col justify-end shadow-level-1">
+              <GraduationCap className="text-primary mb-4" size={36} />
+              <h4 className="text-primary font-display text-xl font-medium tracking-tight">Future Leaders</h4>
+            </div>
+            <div className="aspect-[3/4] bg-white border border-gray-100 rounded-2xl p-6 md:p-8 flex flex-col justify-end shadow-level-1">
+              <Users2 className="text-primary mb-4" size={36} />
+              <h4 className="text-primary font-display text-xl font-medium tracking-tight">Community Impact</h4>
+            </div>
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+}

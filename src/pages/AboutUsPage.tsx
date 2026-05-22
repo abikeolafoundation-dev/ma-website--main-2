@@ -1,0 +1,201 @@
+import {ReactNode} from 'react';
+import {motion} from 'motion/react';
+import {ShieldCheck, Heart, Eye, Menu, Mail, Globe} from 'lucide-react';
+
+const RevealOnScroll = ({children, delay = 0}: {children: ReactNode, delay?: number, key?: string | number}) => (
+  <motion.div
+    initial={{opacity: 0, y: 20}}
+    whileInView={{opacity: 1, y: 0}}
+    viewport={{once: true}}
+    transition={{duration: 0.8, ease: "easeOut", delay}}
+  >
+    {children}
+  </motion.div>
+);
+
+export default function AboutUsPage() {
+  const team = [
+    {
+      name: "Fatima Al-Hassan",
+      role: "Program Director",
+      description: "Fatima leads our outreach strategies, coordinating field operations to ensure direct aid reaches remote communities effectively.",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAXAHr9-UgsPBtf2NsGA7jtXnED83kQCylOXJQRiY9J4AHRRrk9TsWG2l94qeKfoVWkemP99hQvOSu83tnLZ4vzhv-9bufeIHKVFvl5qvqZefrZ8GFbHIa4LneX55KP1vZ5uYVBgUIpvgNoQlvdmNnP9rlL9Cdd5kXtSY53X4oUhA1jBd4vMaf3Ozi6i-KQx-d60OcU4AyfjVnswUQ97EMQFnskXDvwJg4Hw7j5PsBUwxa18hJ93DvILtl-GTeyVOdw1JjRE5o8lag"
+    },
+    {
+      name: "Ibrahim Musa",
+      role: "Waqf Fund Manager",
+      description: "Overseeing our sustainable endowment funds, Ibrahim ensures the long-term financial stability of our orphan support programs.",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwnGUtrqHQmEdaGy-sRXNvQmDAmntwRkuSh_FeLbCTiATM5H7JDpfSwkSIAG-fSwh5k3DtZXUHxdoctX-EGcP0p-methJDPb2WDRhS78tOxC2ijyr5OvPX5r04-VeCcOBzJ_acba0-zlqYrfH9whyNv96QW24iZ6BM1JC22Q4v4_cPnfdMZPnQZoYDZou-AAoFsRA9mmURZ0-dIn5V7g7PyEi6H5OugUPwJcIe9nSZDz0Q84znty5fRNS0QA5nhrHgEKMJgsVjZcc"
+    },
+    {
+      name: "Amina Olayinka",
+      role: "Head of Operations",
+      description: "Amina streamlines our logistics, from food relief distribution to medical equipment procurement for rural clinics.",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBdvIwmTBkEMDGtYrIeNBMuJY3aHpsT2MZ38pen6cpIQhTlpMIsMSi6lYyf-6iVc033D2b0SxrsROPs4Zbm9b0LLRHE1oyEHdfcO3dOCWrG4a5hiyW1Jp1eni_34ueFq7mgN6OTIdMy4yoMXztIzB_I0YMpu4aySq9wBs1dZ-xRwYbgytWAvdL3PDTVsBtDegoHYMjb71Mxa6r_rCiEeXQ08BbjzHFCot9K6ZpNAJZBUSLLkX_VOEMNV-PDOK2gK9Hg_BQufGVB__4"
+    }
+  ];
+
+  return (
+    <main className="bg-background">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-[radial-gradient(circle_at_2px_2px,rgba(200,155,60,0.05)_1px,transparent_0)] bg-[length:32px_32px]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-7 z-10">
+            <motion.div 
+              initial={{opacity: 0, x: -30}}
+              animate={{opacity: 1, x: 0}}
+              transition={{duration: 0.8}}
+            >
+              <div className="inline-flex items-center gap-3 text-[#C89B3C] mb-8">
+                <span className="w-12 h-px bg-[#C89B3C]"></span>
+                <span className="font-body text-xs font-bold tracking-[0.2em] uppercase">Legacy of Stewardship</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl text-primary font-display font-semibold mb-8 leading-tight">
+                Our Visionary Leadership
+              </h1>
+              <div className="relative pl-8 border-l-4 border-[#C89B3C] mb-10">
+                <p className="text-xl md:text-2xl font-display italic text-[#414943] leading-relaxed">
+                  "True wealth is not measured by what we keep, but by what we give back to those who have lost the most."
+                </p>
+                <cite className="block mt-4 font-body text-sm font-bold not-italic text-primary">— Hajiya Abikeola, Founder</cite>
+              </div>
+              <div className="prose prose-lg max-w-2xl text-[#414943] font-body">
+                <p className="leading-relaxed">
+                  Dedicated to the upliftment of the most vulnerable, Hajiya Abikeola has spent over two decades pioneering grassroots initiatives across the region. Her mission focuses on the sustainable support of widows and orphans, ensuring that tragedy does not lead to poverty, and that every child has a pathway to excellence through education and community care.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+          <div className="lg:col-span-5 relative">
+            <motion.div 
+              initial={{opacity: 0, scale: 0.9, rotate: 2}}
+              animate={{opacity: 1, scale: 1, rotate: 0}}
+              whileHover={{rotate: -2}}
+              transition={{duration: 0.8}}
+              className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-emerald-deep/5"
+            >
+              <img 
+                alt="Portrait of Hajiya Abikeola" 
+                className="w-full h-full object-cover" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD96M9FI6oX-nyufZJ2de1kfv7OJWlWknWsDg9J-MTWmufQ5hNTv3GC76uVOEuH6fkHXd2pZwv_jhGkTgt7_1sZ05N5XH23i6Ii2TPJLbSkDEj3Sw6KD5V21GRoIyWYSuycFTjScz8bWhSKyfeyv12m-OcI9y5xhMhg4qgWjgNJlaKr3HoBWgKC5DkhsfRzgM5102IK4oPL-O2rXAE-8SZnyLbAbldd9B1qyVhQ83NHlI-7spIAmbb190ttVUxXZvk5cSda3ehnzs0" 
+              />
+            </motion.div>
+            <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute -top-8 -right-8 w-64 h-64 bg-[#C89B3C]/5 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Essential Team Section */}
+      <section className="py-24 md:py-32 bg-[#f1f5ee]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl text-primary font-display font-semibold mb-4">The Essential Team</h2>
+            <p className="text-xs font-bold text-[#C89B3C] uppercase tracking-[0.2em]">Our Professional Pillars</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {team.map((member, idx) => (
+              <RevealOnScroll key={member.name} delay={idx * 0.1}>
+                <div className="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500 border border-emerald-deep/5 h-full">
+                  <div className="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-white shadow-md">
+                    <img 
+                      alt={member.name} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                      src={member.image} 
+                    />
+                  </div>
+                  <h3 className="text-2xl text-primary font-display font-semibold mb-2">{member.name}</h3>
+                  <p className="text-xs font-bold text-[#C89B3C] mb-6 uppercase tracking-widest">{member.role}</p>
+                  <p className="text-[#717972] font-body leading-relaxed">{member.description}</p>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Founder Deep Dive */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+            <div className="order-2 lg:order-1">
+              <RevealOnScroll>
+                <div className="inline-flex items-center gap-3 text-[#C89B3C] mb-8">
+                  <span className="w-12 h-px bg-[#C89B3C]"></span>
+                  <span className="font-body text-xs font-bold tracking-[0.2em] uppercase">Deep Dive</span>
+                </div>
+                <h2 className="text-3xl md:text-5xl text-primary font-display font-semibold mb-10">Meet the Founder</h2>
+                <div className="prose prose-lg max-w-none text-[#414943] font-body space-y-6">
+                  <p className="leading-relaxed">
+                    Hajiya Abikeola's journey in humanitarian service began over two decades ago, rooted in a deep-seated belief that community strength is measured by its support for the most vulnerable. Her 20+ years of grassroots service have seen her navigating the furthest reaches of the region to bring relief and hope where it was needed most.
+                  </p>
+                  <p className="leading-relaxed">
+                    The motivation for establishing the Abikeola Charitable Foundation came from a vision of sustainable empowerment. Rather than relying solely on temporary aid, she championed the concept of a sustainable Waqf (endowment) fund. This ensures that the foundation's support for widows and orphans is not just a one-time gesture, but a lifelong commitment to their stability and growth.
+                  </p>
+                  <p className="leading-relaxed">
+                    Her personal commitment remains the heartbeat of the organization. By focusing on education, health, and economic empowerment, she continues to lead the foundation with the same passion that ignited her first grassroots initiative, ensuring every child has the opportunity to thrive regardless of their circumstances.
+                  </p>
+                </div>
+              </RevealOnScroll>
+            </div>
+            <div className="order-1 lg:order-2">
+              <RevealOnScroll>
+                <div className="relative">
+                  <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
+                    <img 
+                      alt="Hajiya Abikeola Portrait" 
+                      className="w-full h-full object-cover" 
+                      src="https://lh3.googleusercontent.com/aida/ADBb0ugrrfbSDHqkZqw2X33aAh4VQ5xs5GJ5jYGkyPdGhEyI6MnxwbgDxRzNYDDE5GOGnlfm_m9W959Q7AWb3G4X7jDMSD-ot9obiSKuMriMk8PGheKxgUHsaPu9oYFuf1E4Wdh2ZZZsx1k_2DKl_MHfgCXbfJtCcuUh2bHQhmYk2lV5QrEk90HiMsasu6LqzvPKA8qr_YIEwNoWaZuYq9d0sWOJaqknBGFCbf1Q_UVWqIZbUbPbxnPliT3af4f_P3ixQxmp4oITspd7HA" 
+                    />
+                  </div>
+                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C89B3C]/10 rounded-full blur-2xl -z-10"></div>
+                </div>
+              </RevealOnScroll>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-24 bg-surface-cream">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <RevealOnScroll>
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center rounded-xl text-primary shadow-sm">
+                  <ShieldCheck size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl md:text-2xl text-primary font-display font-semibold mb-3">Integrity</h4>
+                  <p className="text-[#717972] font-body leading-relaxed">We maintain the highest ethical standards in every transaction and community interaction.</p>
+                </div>
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.1}>
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center rounded-xl text-primary shadow-sm">
+                  <Heart size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl md:text-2xl text-primary font-display font-semibold mb-3">Compassion</h4>
+                  <p className="text-[#717972] font-body leading-relaxed">Our work is driven by a deep empathy for the human condition and a desire to heal.</p>
+                </div>
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.2}>
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center rounded-xl text-primary shadow-sm">
+                  <Eye size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl md:text-2xl text-primary font-display font-semibold mb-3">Transparency</h4>
+                  <p className="text-[#717972] font-body leading-relaxed">Total openness in financial reporting, ensuring every donor knows their impact.</p>
+                </div>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

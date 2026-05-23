@@ -16,9 +16,9 @@ const RevealOnScroll = ({children, delay = 0}: {children: ReactNode, delay?: num
 export default function AboutUsPage() {
   const team = [
     {
-      name: "Fatima Al-Hassan",
+      name: "Raheam Adefemi Adeyanju",
       role: "Program Director",
-      description: "Fatima leads our outreach strategies, coordinating field operations to ensure direct aid reaches remote communities effectively.",
+      description: "Raheam leads our outreach strategies, coordinating field operations to ensure direct aid reaches remote communities effectively.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAXAHr9-UgsPBtf2NsGA7jtXnED83kQCylOXJQRiY9J4AHRRrk9TsWG2l94qeKfoVWkemP99hQvOSu83tnLZ4vzhv-9bufeIHKVFvl5qvqZefrZ8GFbHIa4LneX55KP1vZ5uYVBgUIpvgNoQlvdmNnP9rlL9Cdd5kXtSY53X4oUhA1jBd4vMaf3Ozi6i-KQx-d60OcU4AyfjVnswUQ97EMQFnskXDvwJg4Hw7j5PsBUwxa18hJ93DvILtl-GTeyVOdw1JjRE5o8lag"
     },
     {
@@ -61,7 +61,7 @@ export default function AboutUsPage() {
               </div>
               <div className="prose prose-lg max-w-2xl text-[#414943] font-body">
                 <p className="leading-relaxed">
-                  Dedicated to the upliftment of the most vulnerable, Hajiya Abikeola has spent over two decades pioneering grassroots initiatives across the region. Her mission focuses on the sustainable support of widows and orphans, ensuring that tragedy does not lead to poverty, and that every child has a pathway to excellence through education and community care.
+                  Dedicated to the upliftment of the most vulnerable, Hajiya Abikeola has spent over two decades pioneering grassroots initiatives across the region. Her mission focuses on the sustainable support of widows venurables and orphans, ensuring that tragedy does not lead to poverty, and that every child has a pathway to excellence through education and community care.
                 </p>
               </div>
             </motion.div>
@@ -86,34 +86,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* The Essential Team Section */}
-      <section className="py-24 md:py-32 bg-[#f1f5ee]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl text-primary font-display font-semibold mb-4">The Essential Team</h2>
-            <p className="text-xs font-bold text-[#C89B3C] uppercase tracking-[0.2em]">Our Professional Pillars</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, idx) => (
-              <RevealOnScroll key={member.name} delay={idx * 0.1}>
-                <div className="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500 border border-emerald-deep/5 h-full">
-                  <div className="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-white shadow-md">
-                    <img 
-                      alt={member.name} 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                      src={member.image} 
-                    />
-                  </div>
-                  <h3 className="text-2xl text-primary font-display font-semibold mb-2">{member.name}</h3>
-                  <p className="text-xs font-bold text-[#C89B3C] mb-6 uppercase tracking-widest">{member.role}</p>
-                  <p className="text-[#717972] font-body leading-relaxed">{member.description}</p>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Meet the Founder Deep Dive */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -127,14 +99,23 @@ export default function AboutUsPage() {
                 <h2 className="text-3xl md:text-5xl text-primary font-display font-semibold mb-10">Meet the Founder</h2>
                 <div className="prose prose-lg max-w-none text-[#414943] font-body space-y-6">
                   <p className="leading-relaxed">
-                    Hajiya Abikeola's journey in humanitarian service began over two decades ago, rooted in a deep-seated belief that community strength is measured by its support for the most vulnerable. Her 20+ years of grassroots service have seen her navigating the furthest reaches of the region to bring relief and hope where it was needed most.
-                  </p>
-                  <p className="leading-relaxed">
-                    The motivation for establishing the Abikeola Charitable Foundation came from a vision of sustainable empowerment. Rather than relying solely on temporary aid, she championed the concept of a sustainable Waqf (endowment) fund. This ensures that the foundation's support for widows and orphans is not just a one-time gesture, but a lifelong commitment to their stability and growth.
-                  </p>
-                  <p className="leading-relaxed">
-                    Her personal commitment remains the heartbeat of the organization. By focusing on education, health, and economic empowerment, she continues to lead the foundation with the same passion that ignited her first grassroots initiative, ensuring every child has the opportunity to thrive regardless of their circumstances.
-                  </p>
+  Semilu Fatima Fadekemi is a compassionate humanitarian, philanthropist, and community development advocate dedicated to supporting vulnerable individuals and promoting positive social impact within society.
+</p>
+<p className="leading-relaxed">
+  Born on February 28, 1987, in Lagos, she began her educational journey at Ideal Nursery and Primary School before proceeding to Awori Ajeromi Grammar School and later attended Upper College for her secondary education.
+</p>
+<p className="leading-relaxed">
+  Driven by a passion for knowledge and societal development, she furthered her education at Lagos State University where she studied History and International Relations during the 2010/2011 academic session.
+</p>
+<p className="leading-relaxed">
+  As the founder of Abikeola Charitable Foundation, Semilu Fatima Fadekemi has consistently demonstrated a strong commitment to humanitarian service, community welfare, and empowerment initiatives aimed at supporting widows, orphans, single parents, the elderly, and other vulnerable individuals.
+</p>
+<p className="leading-relaxed">
+  Under her leadership, the foundation has successfully organized charitable outreach programs, including food relief distributions and awareness campaigns that have positively impacted over 100 beneficiaries across local communities. Her dedication to giving back to society continues to inspire hope and create meaningful change in the lives of many.
+</p>
+<p className="leading-relaxed">
+  She is widely recognized for her kindness, leadership spirit, and unwavering passion for humanity and community development.
+</p>
                 </div>
               </RevealOnScroll>
             </div>
@@ -145,7 +126,7 @@ export default function AboutUsPage() {
                     <img 
                       alt="Hajiya Abikeola Portrait" 
                       className="w-full h-full object-cover" 
-                      src="https://lh3.googleusercontent.com/aida/ADBb0ugrrfbSDHqkZqw2X33aAh4VQ5xs5GJ5jYGkyPdGhEyI6MnxwbgDxRzNYDDE5GOGnlfm_m9W959Q7AWb3G4X7jDMSD-ot9obiSKuMriMk8PGheKxgUHsaPu9oYFuf1E4Wdh2ZZZsx1k_2DKl_MHfgCXbfJtCcuUh2bHQhmYk2lV5QrEk90HiMsasu6LqzvPKA8qr_YIEwNoWaZuYq9d0sWOJaqknBGFCbf1Q_UVWqIZbUbPbxnPliT3af4f_P3ixQxmp4oITspd7HA" 
+                      src= "https://lh3.googleusercontent.com/aida/ADBb0uicH3gMQrbExQmOISY524vY7ABB2pjX7zxNJvlr6wq-zDXSfWHwXxCT_o6Nekkal7oHdE0rkpJqVdtCRLwfFcZYd8ZpDzMpPGWyUuzzHLBEOdmhgO3rqeo1dUZP_xOh2urFkv06rmsiSkPKYQAyu7H3u4rGqn_lGk4tpYf9t5MW9u_5tX1-TNggpzxEIhFQbKstsvNe4KCba--UhO3BkxyPF1ZnzqAPsgrpb439zric8V3JI5fAJ6Zp7rOlBwDH35Eh4oUOSwVH"
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C89B3C]/10 rounded-full blur-2xl -z-10"></div>

@@ -47,14 +47,14 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvi-mYbXscdzTcrKgrUEYC_Jvyaig4S_s82MLWaD9oPvpSG4F7jJxVtMHPmSZVQ7wwCcPYe8l18ISdKyGBRuXCRBWMlKvubskT7Efl_HcadiIi3pvQvv3_z8M0u7iWF_zqK-9s52ZuKW6RE7e__fUhHz55MIPtRV171-0V2MgxOIoEWs3opiRwnuTboQgpRE-VDdSLCODBoIfcH9PEiTCyKGBV4DIwCp6UYnvUcZ7zGaP4SpsdI3N_aE-1KhvYvQDhuRLIioo7rr0" 
-            alt="Abikeola Logo" 
+            src="/logo.jpg" 
+            alt="Abikeola Charitable Foundation Logo" 
             className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover"
           />
           <span className={`font-display text-xl md:text-2xl font-bold ${
             isScrolled || isLightBackground ? 'text-primary' : 'text-white'
           }`}>
-            Abikeola Foundation
+            Abikeola Charitable Foundation
           </span>
         </div>
 

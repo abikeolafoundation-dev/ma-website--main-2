@@ -138,7 +138,7 @@ export function Footer() {
         
         {/* Brand */}
         <div className="space-y-6">
-          <div className="text-white text-2xl font-display font-bold">Abikeola Foundation</div>
+          <div className="text-white text-2xl font-display font-bold">Abikeola Charitable Foundation</div>
           <p className="font-body opacity-70 leading-relaxed">
             Securing the legacy of breadwinners and providing a bridge to a better tomorrow through sustainable charity models.
           </p>

@@ -1,7 +1,10 @@
-import {motion} from 'motion/react';
-import {Lock, FileText, RefreshCw} from 'lucide-react';
+import {useState} from 'react';
+import {motion, AnimatePresence} from 'motion/react';
+import {Lock, FileText, RefreshCw, AlertCircle, X} from 'lucide-react';
 
 export default function DonationTiers() {
+  const [showModal, setShowModal] = useState(false);
+
   const tiers = [
     {
       id: 'support',
@@ -26,6 +29,11 @@ export default function DonationTiers() {
       isCustom: true,
     }
   ];
+
+  const handleDonateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowModal(true);
+  };
 
   return (
     <section id="donate" className="py-24 md:py-32 bg-white">
@@ -84,11 +92,14 @@ export default function DonationTiers() {
                 </div>
               )}
 
-              <button className={`w-full py-4 rounded-xl font-body font-bold text-lg transition-all ${
-                tier.highlight 
-                  ? 'bg-gold-light text-primary hover:brightness-105' 
-                  : tier.id === 'custom' ? 'bg-primary text-white' : 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
-              }`}>
+              <button 
+                onClick={handleDonateClick}
+                className={`w-full py-4 rounded-xl font-body font-bold text-lg transition-all ${
+                  tier.highlight 
+                    ? 'bg-gold-light text-primary hover:brightness-105' 
+                    : tier.id === 'custom' ? 'bg-primary text-white' : 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
+                }`}
+              >
                 {tier.isCustom ? 'Donate Custom' : 'Select Amount'}
               </button>
             </motion.div>
@@ -108,6 +119,61 @@ export default function DonationTiers() {
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {showModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowModal(false)}
+              className="absolute inset-0 bg-[#0c1812]/60 backdrop-blur-sm"
+            />
+            
+            {/* Modal Content */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: 'spring', duration: 0.5 }}
+              className="relative bg-white rounded-3xl p-8 md:p-10 shadow-2xl max-w-md w-full border border-gold-light/20 z-10 overflow-hidden"
+            >
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-gold-light to-primary" />
+              
+              <button 
+                onClick={() => setShowModal(false)}
+                className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 transition-colors text-gray-400 hover:text-gray-600 cursor-pointer"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="flex flex-col items-center text-center mt-4">
+                <div className="w-16 h-16 rounded-full bg-gold-light/10 flex items-center justify-center text-secondary mb-6">
+                  <AlertCircle size={32} />
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
+                  Donate isn't active yet
+                </h3>
+                
+                <p className="text-[#515953] font-body leading-relaxed mb-8">
+                  The payment portal is currently under construction.
+                </p>
+                
+                <button 
+                  onClick={() => setShowModal(false)}
+                  className="w-full bg-primary hover:brightness-110 text-white font-body font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                >
+                  Understood
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

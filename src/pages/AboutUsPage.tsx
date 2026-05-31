@@ -57,11 +57,11 @@ export default function AboutUsPage() {
                 <p className="text-xl md:text-2xl font-display italic text-[#414943] leading-relaxed">
                   "True wealth is not measured by what we keep, but by what we give back to those who have lost the most."
                 </p>
-                <cite className="block mt-4 font-body text-sm font-bold not-italic text-primary">— Hajiya Abikeola, Founder</cite>
+                <cite className="block mt-4 font-body text-sm font-bold not-italic text-primary">— Semilu Fatima Fadekemi, Founder</cite>
               </div>
               <div className="prose prose-lg max-w-2xl text-[#414943] font-body">
                 <p className="leading-relaxed">
-                  Dedicated to the upliftment of the most vulnerable, Hajiya Abikeola has spent over two decades pioneering grassroots initiatives across the region. Her mission focuses on the sustainable support of widows venurables and orphans, ensuring that tragedy does not lead to poverty, and that every child has a pathway to excellence through education and community care.
+                  Dedicated to the upliftment of the most vulnerable, Semilu Fatima Fadekemi has spent over two decades pioneering grassroots initiatives across the region. Her mission focuses on the sustainable support of widows, vulnerable groups, and orphans, ensuring that tragedy does not lead to poverty, and that every child has a pathway to excellence through education and community care.
                 </p>
               </div>
             </motion.div>
@@ -75,9 +75,9 @@ export default function AboutUsPage() {
               className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-emerald-deep/5"
             >
               <img 
-                alt="Portrait of Hajiya Abikeola" 
+                alt="Portrait of Semilu Fatima Fadekemi" 
                 className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD96M9FI6oX-nyufZJ2de1kfv7OJWlWknWsDg9J-MTWmufQ5hNTv3GC76uVOEuH6fkHXd2pZwv_jhGkTgt7_1sZ05N5XH23i6Ii2TPJLbSkDEj3Sw6KD5V21GRoIyWYSuycFTjScz8bWhSKyfeyv12m-OcI9y5xhMhg4qgWjgNJlaKr3HoBWgKC5DkhsfRzgM5102IK4oPL-O2rXAE-8SZnyLbAbldd9B1qyVhQ83NHlI-7spIAmbb190ttVUxXZvk5cSda3ehnzs0" 
+                src="https://www.juicer.io/api/media/30601449?s=5cf49b5a43834350b75502e75b14c7d2ed8afc25" 
               />
             </motion.div>
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
@@ -124,9 +124,9 @@ export default function AboutUsPage() {
                 <div className="relative">
                   <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
                     <img 
-                      alt="Hajiya Abikeola Portrait" 
+                      alt="Semilu Fatima Fadekemi Portrait" 
                       className="w-full h-full object-cover" 
-                      src= "https://lh3.googleusercontent.com/aida/ADBb0uicH3gMQrbExQmOISY524vY7ABB2pjX7zxNJvlr6wq-zDXSfWHwXxCT_o6Nekkal7oHdE0rkpJqVdtCRLwfFcZYd8ZpDzMpPGWyUuzzHLBEOdmhgO3rqeo1dUZP_xOh2urFkv06rmsiSkPKYQAyu7H3u4rGqn_lGk4tpYf9t5MW9u_5tX1-TNggpzxEIhFQbKstsvNe4KCba--UhO3BkxyPF1ZnzqAPsgrpb439zric8V3JI5fAJ6Zp7rOlBwDH35Eh4oUOSwVH"
+                      src="https://www.juicer.io/api/media/30601449?s=5cf49b5a43834350b75502e75b14c7d2ed8afc25" 
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C89B3C]/10 rounded-full blur-2xl -z-10"></div>

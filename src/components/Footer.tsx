@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Share2, Mail, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
@@ -156,7 +156,7 @@ export function Footer() {
         <div className="space-y-6">
           <h4 className="text-white font-body font-bold text-lg">Our Foundation</h4>
           <nav className="flex flex-col gap-4">
-            {['Our Pillars', 'The Waqf Model', 'Impact Stories', 'Annual Reports'].map(link => (
+            {['Our Pillars', 'The Endowment Model', 'Impact Stories', 'Annual Reports'].map(link => (
               <a key={link} href="#" className="opacity-70 hover:opacity-100 hover:text-gold-light transition-all font-body">{link}</a>
             ))}
           </nav>
@@ -177,15 +177,15 @@ export function Footer() {
           <h4 className="text-white font-body font-bold text-lg">Transparency</h4>
           <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
             <p className="text-sm italic opacity-60 mb-4 font-body leading-relaxed">
-              "And whatever you spend in good, it is for yourselves, when you spend not except seeking Allah's Countenance."
+              "We believe that community strength is measured by how we empower and support the most vulnerable among us."
             </p>
-            <p className="text-xs text-gold-light font-body font-bold">— Surah Al-Baqarah 272</p>
+            <p className="text-xs text-gold-light font-body font-bold">— Our Mission Statement</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs opacity-50 font-body">
-        <p>© 2024 Abikeola Charitable Foundation. All rights reserved. Registered NGO. Sharia-compliant Zakat Fund.</p>
+        <p>© 2024 Abikeola Charitable Foundation. All rights reserved. Registered NGO. Supporting sustainable community development.</p>
         <div className="flex gap-8">
           <a href="#" className="hover:text-gold-light">Terms of Service</a>
           <a href="#" className="hover:text-gold-light">Cookie Policy</a>

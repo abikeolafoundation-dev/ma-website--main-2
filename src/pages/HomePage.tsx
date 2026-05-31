@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import Impact from '../components/Impact';
-import WaqfModel from '../components/WaqfModel';
+import EndowmentModel from '../components/EndowmentModel';
 import DonationTiers from '../components/DonationTiers';
 import BeneficiaryStory from '../components/BeneficiaryStory';
 import Newsletter from '../components/Newsletter';
@@ -10,7 +10,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <Impact />
-      <WaqfModel />
+      <EndowmentModel />
       <DonationTiers />
       <BeneficiaryStory />
       <Newsletter />

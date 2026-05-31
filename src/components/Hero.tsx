@@ -36,7 +36,7 @@ export default function Hero() {
               Securing Futures When a Breadwinner is Lost.
             </h1>
             <p className="text-white/90 text-lg md:text-xl font-body mb-10 max-w-lg leading-relaxed">
-              We provide dignity, education, and vocational support to families facing the sudden loss of their primary support system through Sharia-compliant Waqf and Zakat funds.
+              We provide dignity, education, and vocational support to families facing the sudden loss of their primary support system through sustainable community endowment and empowerment funds.
             </p>
             
             <div className="flex flex-wrap gap-4 md:gap-6">

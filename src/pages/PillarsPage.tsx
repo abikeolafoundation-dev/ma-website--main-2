@@ -29,10 +29,10 @@ export default function PillarsPage() {
               ESTABLISHED STEWARDSHIP
             </div>
             <h1 className="text-4xl md:text-6xl text-primary font-display font-semibold max-w-3xl mb-6">
-              Our Pillars & The Waqf Model
+              Our Pillars & The Endowment Model
             </h1>
             <p className="text-lg md:text-xl text-[#414943] font-body max-w-2xl leading-relaxed">
-              Sustaining generational impact through the intersection of traditional Islamic endowment principles and modern institutional excellence.
+              Sustaining generational impact through the intersection of traditional sustainable endowment principles and modern institutional excellence.
             </p>
           </motion.div>
         </div>
@@ -118,11 +118,11 @@ export default function PillarsPage() {
         </div>
       </section>
 
-      {/* The Sustainable Waqf Model Section */}
+      {/* The Sustainable Endowment Model Section */}
       <section className="py-24 px-6 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl text-primary font-display font-semibold mb-4">The Sustainable Waqf Model</h2>
+            <h2 className="text-3xl md:text-5xl text-primary font-display font-semibold mb-4">The Sustainable Endowment Model</h2>
             <p className="text-lg md:text-xl text-[#414943] font-body max-w-2xl mx-auto leading-relaxed">
               Empowerment through Endowment: A legacy that never ends.
             </p>
@@ -154,8 +154,8 @@ export default function PillarsPage() {
                 <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20">
                   <Landmark className="text-white" size={32} />
                 </div>
-                <h4 className="text-xs text-gold-light font-body font-bold uppercase tracking-widest mb-2 text-center">Sharia Investment</h4>
-                <p className="text-sm opacity-90 font-body text-center leading-relaxed">Capital is placed in high-yield, ethical, Sharia-compliant assets.</p>
+                <h4 className="text-xs text-gold-light font-body font-bold uppercase tracking-widest mb-2 text-center">Sustainable Investment</h4>
+                <p className="text-sm opacity-90 font-body text-center leading-relaxed">Capital is placed in high-yield, ethical, and sustainable assets.</p>
               </div>
             </RevealOnScroll>
 
@@ -171,7 +171,7 @@ export default function PillarsPage() {
                 <div className="w-16 h-16 bg-gold-light/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <HeartHandshake className="text-secondary" size={32} />
                 </div>
-                <h4 className="text-xs text-secondary font-body font-bold uppercase tracking-widest mb-2">Sadaqah Jariyah</h4>
+                <h4 className="text-xs text-secondary font-body font-bold uppercase tracking-widest mb-2">Enduring Impact</h4>
                 <p className="text-sm text-[#717972] font-body">Only generated profits fund programs, creating a perpetual stream.</p>
               </div>
             </RevealOnScroll>
@@ -187,7 +187,7 @@ export default function PillarsPage() {
                 <div>
                   <h4 className="text-2xl text-primary font-display font-semibold mb-4 text-[#072C1D]">Generational Preservation</h4>
                   <p className="text-lg text-[#414943] font-body leading-relaxed">
-                    Traditional charity is consumed. Our Waqf Model survives. By investing the principal, we ensure that the support for orphans and widows today is still available for the generations of tomorrow.
+                    Traditional charity is consumed. Our Endowment Model survives. By investing the principal, we ensure that the support for orphans and widows today is still available for the generations of tomorrow.
                   </p>
                 </div>
               </div>
@@ -201,9 +201,9 @@ export default function PillarsPage() {
               </div>
               <ul className="space-y-4">
                 {[
-                  'Sharia-Compliant Asset Selection',
+                  'Ethical & Sustainable Asset Selection',
                   'Fully Audited Annual Financial Reports',
-                  'Independent Board of Advisors & Ulama',
+                  'Independent Board of Trustees & Advisors',
                   '100% Transparency in Fund Allocation'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-[#414943] font-body font-medium">

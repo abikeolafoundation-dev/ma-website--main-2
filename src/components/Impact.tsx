@@ -4,7 +4,7 @@ import {ShieldCheck, HandHelping, Landmark} from 'lucide-react';
 export default function Impact() {
   const anchors = [
     {icon: <ShieldCheck size={32} />, text: '100% Secure Checkout'},
-    {icon: <HandHelping size={32} />, text: 'Sharia-Compliant Zakat Fund'},
+    {icon: <HandHelping size={32} />, text: 'Community Empowerment Fund'},
     {icon: <Landmark size={32} />, text: 'Registered NGO Badge'},
   ];
 

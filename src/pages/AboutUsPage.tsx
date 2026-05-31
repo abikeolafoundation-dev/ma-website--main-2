@@ -23,7 +23,7 @@ export default function AboutUsPage() {
     },
     {
       name: "Ibrahim Musa",
-      role: "Waqf Fund Manager",
+      role: "Endowment Fund Manager",
       description: "Overseeing our sustainable endowment funds, Ibrahim ensures the long-term financial stability of our orphan support programs.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwnGUtrqHQmEdaGy-sRXNvQmDAmntwRkuSh_FeLbCTiATM5H7JDpfSwkSIAG-fSwh5k3DtZXUHxdoctX-EGcP0p-methJDPb2WDRhS78tOxC2ijyr5OvPX5r04-VeCcOBzJ_acba0-zlqYrfH9whyNv96QW24iZ6BM1JC22Q4v4_cPnfdMZPnQZoYDZou-AAoFsRA9mmURZ0-dIn5V7g7PyEi6H5OugUPwJcIe9nSZDz0Q84znty5fRNS0QA5nhrHgEKMJgsVjZcc"
     },

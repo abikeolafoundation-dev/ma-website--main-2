@@ -1,25 +1,40 @@
-import {motion} from 'motion/react';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'motion/react';
 import {Heart, ArrowRight} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
+const images = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCBkGyPt-LA7n8pOQOEnFXx5dQJOiJCq-UxUqQ167DhiaLRTz84ExKgetrM7P0bxjrzFHcEbq8_pbZQaFgwpTOBmXTwuAfsUQjy78R1WiDuXrI08Gro340-htoLGKE1-DwQq932TUvP1PF8oalcHR6g-o15l2XDMxQk8vFkMIZPr9r-UYWtAS2QTQ6Og86bwPdhCEPti9LLRdBiRkrCejJIOdCw1bs3CMIkoXvG1KYTAAM_4xzdI8zftaT4ZIj4527YyG5byqzZvBg",
+  "https://media.licdn.com/dms/image/v2/D5622AQGlqK6KU5l4jA/feedshare-shrink_800/B56Z48TeZ1GYAg-/0/1779128199417?e=1781740800&v=beta&t=XJfsTqx3003Q1IMDKYBaIdBwEQD47IjwEotcbX9y5WM"
+];
+
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000); // changes every 6 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-      {/* Background with zoom effect */}
+      {/* Background with cross-fading effect */}
       <div className="absolute inset-0 z-0">
-        <motion.div 
-          initial={{scale: 1.1}}
-          animate={{scale: 1}}
-          transition={{duration: 10, ease: "easeOut"}}
-          className="w-full h-full"
-        >
-          <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBkGyPt-LA7n8pOQOEnFXx5dQJOiJCq-UxUqQ167DhiaLRTz84ExKgetrM7P0bxjrzFHcEbq8_pbZQaFgwpTOBmXTwuAfsUQjy78R1WiDuXrI08Gro340-htoLGKE1-DwQq932TUvP1PF8oalcHR6g-o15l2XDMxQk8vFkMIZPr9r-UYWtAS2QTQ6Og86bwPdhCEPti9LLRdBiRkrCejJIOdCw1bs3CMIkoXvG1KYTAAM_4xzdI8zftaT4ZIj4527YyG5byqzZvBg" 
-            alt="Foundation Group" 
-            className="w-full h-full object-cover"
+        <AnimatePresence>
+          <motion.img 
+            key={currentImageIndex}
+            src={images[currentImageIndex]} 
+            alt={`Foundation Slide ${currentImageIndex + 1}`}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2.0, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full object-cover"
           />
-        </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/85 via-emerald-deep/40 to-transparent"></div>
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/85 via-emerald-deep/40 to-transparent z-10"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
